@@ -13,6 +13,7 @@
 		8623382C1B71679D0053B59B /* MoreDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8623382B1B71679D0053B59B /* MoreDetailsViewController.m */; };
 		862E997F1B65872900188E2E /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862E997E1B65872900188E2E /* RatingViewController.m */; };
 		862E99851B665E3600188E2E /* VideoCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 862E99841B665E3600188E2E /* VideoCast.m */; };
+		8699F5CD1B7283A5009AA5B0 /* CommManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8699F5CC1B7283A5009AA5B0 /* CommManager.m */; };
 		86A0144C1B6540DF00CB67F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A0144B1B6540DF00CB67F4 /* main.m */; };
 		86A0144F1B6540DF00CB67F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A0144E1B6540DF00CB67F4 /* AppDelegate.m */; };
 		86A014551B6540DF00CB67F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A014531B6540DF00CB67F4 /* Main.storyboard */; };
@@ -52,6 +53,8 @@
 		862E997E1B65872900188E2E /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingViewController.m; sourceTree = "<group>"; };
 		862E99831B665E3600188E2E /* VideoCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCast.h; sourceTree = "<group>"; };
 		862E99841B665E3600188E2E /* VideoCast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCast.m; sourceTree = "<group>"; };
+		8699F5CB1B7283A5009AA5B0 /* CommManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommManager.h; sourceTree = "<group>"; };
+		8699F5CC1B7283A5009AA5B0 /* CommManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommManager.m; sourceTree = "<group>"; };
 		86A014461B6540DF00CB67F4 /* recSysAppV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recSysAppV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A0144A1B6540DF00CB67F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A0144B1B6540DF00CB67F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,6 +135,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		8699F5CA1B728379009AA5B0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8699F5CB1B7283A5009AA5B0 /* CommManager.h */,
+				8699F5CC1B7283A5009AA5B0 /* CommManager.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		86A0143D1B6540DF00CB67F4 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +167,7 @@
 		86A014481B6540DF00CB67F4 /* recSysAppV2 */ = {
 			isa = PBXGroup;
 			children = (
+				8699F5CA1B728379009AA5B0 /* Network */,
 				86F7948D1B6BD12000B03B1B /* Categories */,
 				86F794861B6BA3FD00B03B1B /* Rating */,
 				86F794851B6BA3F700B03B1B /* Home */,
@@ -410,6 +423,7 @@
 				86F7948C1B6BAF7900B03B1B /* MenuViewController.m in Sources */,
 				8623382C1B71679D0053B59B /* MoreDetailsViewController.m in Sources */,
 				86A0144C1B6540DF00CB67F4 /* main.m in Sources */,
+				8699F5CD1B7283A5009AA5B0 /* CommManager.m in Sources */,
 				862E997F1B65872900188E2E /* RatingViewController.m in Sources */,
 				86F7947B1B6AF2BD00B03B1B /* SideMenu.m in Sources */,
 				862338281B7108190053B59B /* HomeTableViewCell.m in Sources */,

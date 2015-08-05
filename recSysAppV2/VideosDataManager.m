@@ -15,12 +15,12 @@
 
 @implementation VideosDataManager
 + (id)sharedManager {
-    static VideosDataManager *sharedMyManager = nil;
+    static VideosDataManager *videosDataManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedMyManager = [[self alloc] init];
+        videosDataManager = [[self alloc] init];
     });
-    return sharedMyManager;
+    return videosDataManager;
 }
 
 - (id)init {

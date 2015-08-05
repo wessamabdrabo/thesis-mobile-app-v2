@@ -12,6 +12,7 @@
 #import "RatingViewController.h"
 #import "VideosDataManager.h"
 #import "MoreDetailsViewController.h"
+#import "CommManager.h"
 
 @interface DetailsViewController (){
     MPMoviePlayerViewController *_moviePlayerController;
@@ -54,31 +55,26 @@
 #pragma mark - Video player
 
 - (IBAction)watchVideoClicked:(id)sender {
-    // NSString*path = [[NSBundle mainBundle] pathForResource:@"1" ofType:@"mp4"];
-    // NSURL*url = [NSURL fileURLWithPath:path];
+    [[CommManager sharedManager] sendMessage:_video.title];
     
-    //http://download.ted.com/talks/YuvalNoahHarari_2015G-480p.mp4 //works!
-    //http://download.ted.com/talks/IsmaelNazario_2014X-480p.mp4 //doesnt work
-    //Only 2015 videos open ealier versions download!!
-    
-    NSURL *url = [NSURL URLWithString:_video.url];
-    
-    
-    _moviePlayerController =  [[MPMoviePlayerViewController alloc]
-                               initWithContentURL:url];
-    
-    [_moviePlayerController.moviePlayer prepareToPlay];
-    [_moviePlayerController.view setTranslatesAutoresizingMaskIntoConstraints:YES];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(moviePlayBackDidFinish:)
-                                                 name:MPMoviePlayerDidExitFullscreenNotification
-                                               object:_moviePlayerController.moviePlayer];
-    
-    _moviePlayerController.moviePlayer.controlStyle = MPMovieControlStyleDefault;
-    _moviePlayerController.moviePlayer.shouldAutoplay = YES;
-    [self.view addSubview:_moviePlayerController.view];
-    [_moviePlayerController.moviePlayer setFullscreen:YES animated:YES];
+//    NSURL *url = [NSURL URLWithString:_video.url];
+//    
+//    
+//    _moviePlayerController =  [[MPMoviePlayerViewController alloc]
+//                               initWithContentURL:url];
+//    
+//    [_moviePlayerController.moviePlayer prepareToPlay];
+//    [_moviePlayerController.view setTranslatesAutoresizingMaskIntoConstraints:YES];
+//    
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(moviePlayBackDidFinish:)
+//                                                 name:MPMoviePlayerDidExitFullscreenNotification
+//                                               object:_moviePlayerController.moviePlayer];
+//    
+//    _moviePlayerController.moviePlayer.controlStyle = MPMovieControlStyleDefault;
+//    _moviePlayerController.moviePlayer.shouldAutoplay = YES;
+//    [self.view addSubview:_moviePlayerController.view];
+//    [_moviePlayerController.moviePlayer setFullscreen:YES animated:YES];
 }
 
 - (void) moviePlayBackDidFinish:(NSNotification*)notification {
@@ -96,6 +92,5 @@
     //Show rating
     [self performSegueWithIdentifier:@"showRating" sender:self];
 }
-- (IBAction)moreBtnClicked:(id)sender {
-}
+
 @end

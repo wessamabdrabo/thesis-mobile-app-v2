@@ -17,6 +17,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *postedOnLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *speakerLabel;
-- (IBAction)moreBtnClicked:(id)sender;
 
 @end

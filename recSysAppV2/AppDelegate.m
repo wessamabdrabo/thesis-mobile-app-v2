@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "VideosDataManager.h"
+#import "CommManager.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    VideosDataManager* dataManager = [VideosDataManager sharedManager];
+    [VideosDataManager sharedManager]; //load plist of Videos data
+    [CommManager sharedManager]; //init network 
     return YES;
 }
 
