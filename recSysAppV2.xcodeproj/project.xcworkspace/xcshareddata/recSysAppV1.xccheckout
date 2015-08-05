@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6AE5D2F6-B70C-40AD-9260-004ADD6D9A21</string>
+	<key>IDESourceControlProjectName</key>
+	<string>recSysAppV1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FB210A856E8FC72C02FC1B7D144763F6414C2AF0</key>
+		<string>https://github.com/wessamabdrabo/thesis-mobile-app-v1.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>recSysAppV1.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FB210A856E8FC72C02FC1B7D144763F6414C2AF0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wessamabdrabo/thesis-mobile-app-v1.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FB210A856E8FC72C02FC1B7D144763F6414C2AF0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FB210A856E8FC72C02FC1B7D144763F6414C2AF0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>thesis-mobile-app-v1</string>
+		</dict>
+	</array>
+</dict>
+</plist>

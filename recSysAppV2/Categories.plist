@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Activism</string>
+	<string>Arts</string>
+	<string>Business</string>
+	<string>Computers</string>
+	<string>Creativity</string>
+	<string>Design</string>
+	<string>Economics</string>
+	<string>Environment</string>
+	<string>Feminism</string>
+	<string>History</string>
+	<string>Math</string>
+	<string>Music</string>
+	<string>Philosophy</string>
+	<string>Photography</string>
+	<string>Psychology</string>
+	<string>Software</string>
+	<string>Sports</string>
+</array>
+</plist>

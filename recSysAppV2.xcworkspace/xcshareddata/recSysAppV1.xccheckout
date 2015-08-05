@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9D088361-32E5-4230-A9FB-D8CCD1BA7340</string>
+	<key>IDESourceControlProjectName</key>
+	<string>recSysAppV1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>360221EDDA8E1DA65C2B6CC6CA4064125BD406BC</key>
+		<string>https://github.com/wessamabdrabo/thesis-mobile-app-v2.git</string>
+		<key>B2CF499838F0B9B6B31ADF8177187ED370616021</key>
+		<string>https://github.com/wessamabdrabo/thesis-mobile-app-v1.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>recSysAppV1.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>360221EDDA8E1DA65C2B6CC6CA4064125BD406BC</key>
+		<string>..</string>
+		<key>B2CF499838F0B9B6B31ADF8177187ED370616021</key>
+		<string>../../thesis-mobile-app-v1</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wessamabdrabo/thesis-mobile-app-v2.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>360221EDDA8E1DA65C2B6CC6CA4064125BD406BC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B2CF499838F0B9B6B31ADF8177187ED370616021</string>
+			<key>IDESourceControlWCCName</key>
+			<string>thesis-mobile-app-v1</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>360221EDDA8E1DA65C2B6CC6CA4064125BD406BC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>thesis-mobile-app-v2</string>
+		</dict>
+	</array>
+</dict>
+</plist>
