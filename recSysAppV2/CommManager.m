@@ -79,8 +79,10 @@
 }
 
 -(void) sendMessage:(NSString*) msg{
-    NSString *response  = [NSString stringWithFormat:@"iam:%@", @"left"];
-    NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSASCIIStringEncoding]];
+    //NSString *response  = [NSString stringWithFormat:@"iam:%@", @"left"];
+    NSString *response  = [NSString stringWithFormat:@"%@",msg];
+    
+    NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSUTF8StringEncoding]];
     [outputStream write:[data bytes] maxLength:[data length]];
 }
 

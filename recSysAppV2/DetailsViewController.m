@@ -111,8 +111,6 @@
     
     if (gesture.state == UIGestureRecognizerStateBegan) {
         
-        [[CommManager sharedManager] sendMessage:_video.title];
-        
         [self.animator removeAllBehaviors];
         
         startCenter = gesture.view.center;
@@ -188,6 +186,8 @@
                 [weakSelf.animator removeAllBehaviors];
                 [gesture.view removeFromSuperview];
                 
+                [[CommManager sharedManager] sendMessage:_video.url]; //start video on server
+
                 [[[UIAlertView alloc] initWithTitle:nil message:@"Your video will now start on other display" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
             }
         };
