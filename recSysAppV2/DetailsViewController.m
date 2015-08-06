@@ -110,6 +110,8 @@
     static CGFloat               angularVelocity;
     
     if (gesture.state == UIGestureRecognizerStateBegan) {
+        [self.footerView setHidden:NO];
+        [self.footerViewLabel setHidden:NO];
         
         [self.animator removeAllBehaviors];
         
@@ -192,6 +194,8 @@
                 }];                
                 [self.playerBgImgView setHidden:NO];
                 [self.playBtn setHidden:YES];
+                [self.footerView setHidden:YES];
+                [self.footerViewLabel setHidden:YES];
                 
                 [[CommManager sharedManager] sendMessage:_video.url]; //start video on server
 

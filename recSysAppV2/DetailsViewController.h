@@ -20,5 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *playerImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *playerBgImgView;
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
+@property (weak, nonatomic) IBOutlet UIView *footerView;
+@property (weak, nonatomic) IBOutlet UILabel *footerViewLabel;
 
 @end
