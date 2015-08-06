@@ -12,10 +12,13 @@
 - (IBAction)watchVideoClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *videoTitle;
-@property (weak, nonatomic) IBOutlet UITextView *videoLongDescr;
 @property (strong, nonatomic) NSString* videoID;
 @property (weak, nonatomic) IBOutlet UILabel *postedOnLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *speakerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *videoLongDescr;
+@property (weak, nonatomic) IBOutlet UIImageView *playerImgView;
+@property (weak, nonatomic) IBOutlet UIImageView *playerBgImgView;
+@property (weak, nonatomic) IBOutlet UIButton *playBtn;
 
 @end

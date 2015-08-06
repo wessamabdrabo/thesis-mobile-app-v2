@@ -185,6 +185,13 @@
                 
                 [weakSelf.animator removeAllBehaviors];
                 [gesture.view removeFromSuperview];
+                [self.playerImgView setHidden:NO];
+                NSString *imageUrl = _video.imgName;
+                [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:imageUrl]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                    self.playerBgImgView.image = [UIImage imageWithData:data];
+                }];                
+                [self.playerBgImgView setHidden:NO];
+                [self.playBtn setHidden:YES];
                 
                 [[CommManager sharedManager] sendMessage:_video.url]; //start video on server
 
