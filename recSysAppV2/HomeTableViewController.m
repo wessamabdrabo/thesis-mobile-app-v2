@@ -11,6 +11,7 @@
 #import "DetailsViewController.h"
 #import "VideosDataManager.h"
 #import "HomeTableViewCell.h"
+#import "CommManager.h"
 
 @interface HomeTableViewController (){
     NSArray* sectionsHeaderTitles;
@@ -26,6 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[CommManager sharedManager] sendMessage:@"open"]; //tell server to open home
     
     self.navigationItem.hidesBackButton = YES; //better to remove preferences and sign up from stack once sign up is done!
     
