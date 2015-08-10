@@ -12,6 +12,7 @@
 -(id) initWithDict:(NSDictionary*)data{
     self = [super init];
     if(self){
+        self.vidID = [data objectForKey:@"id"];
         self.title = [data objectForKey:@"title"];
         self.longDescr = [data objectForKey:@"descr"];
         self.category = [data objectForKey:@"category"];

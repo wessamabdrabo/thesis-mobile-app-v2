@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[CommManager sharedManager] sendMessage:@"open"]; //tell server to open home
+    [[CommManager sharedManager] sendMessage:@"open:home"]; //tell server to open home
     
     self.navigationItem.hidesBackButton = YES; //better to remove preferences and sign up from stack once sign up is done!
     
@@ -146,6 +146,9 @@
         VideoCast* video = [data objectAtIndex:path.row];
         DetailsViewController* detailsViewController = [segue destinationViewController];
         detailsViewController.videoID = video.title;
+        NSString* msg = [NSString stringWithFormat:@"filter:%@",video.vidID];
+        [[CommManager sharedManager] sendMessage:msg];
+
     }
 }
 

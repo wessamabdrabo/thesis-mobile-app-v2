@@ -10,6 +10,7 @@
 
 @interface VideoCast : NSObject
 -(id) initWithDict:(NSDictionary*)data;
+@property(nonatomic,strong)  NSString* vidID;
 @property(nonatomic,strong)  NSString* title;
 @property(nonatomic, strong) NSString* longDescr;
 @property(nonatomic, strong) NSString* imgName;
