@@ -31,7 +31,7 @@
     return self;
 }
 
--(NSArray*) getCategoryVideosName:(NSString*)category{
+-(NSMutableArray*) getCategoryVideosName:(NSString*)category{
     NSMutableArray* categoryVids = [[NSMutableArray alloc] init];
     for (NSDictionary* vidDict in self.videosData) {
         if ([[vidDict objectForKey:@"category"] isEqualToString:category]) {

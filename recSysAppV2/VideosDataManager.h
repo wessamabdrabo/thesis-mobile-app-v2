@@ -12,6 +12,6 @@
 @interface VideosDataManager : NSObject
 + (id)sharedManager;
 @property (nonatomic, strong) NSArray* videosData;
--(NSArray*) getCategoryVideosName:(NSString*)category;
+-(NSMutableArray*) getCategoryVideosName:(NSString*)category;
 -(VideoCast*) getVideobyID:(NSString*)vidID;
 @end

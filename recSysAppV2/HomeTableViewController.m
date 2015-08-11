@@ -15,11 +15,11 @@
 
 @interface HomeTableViewController (){
     NSArray* sectionsHeaderTitles;
-    NSArray* section1;
-    NSArray* section2;
-    NSArray* section3;
-    NSArray* section4;
-    NSArray* section5;
+    NSMutableArray* section1;
+    NSMutableArray* section2;
+    NSMutableArray* section3;
+    NSMutableArray* section4;
+    NSMutableArray* section5;
 }
 @end
 
@@ -39,8 +39,56 @@
     section3 = [[VideosDataManager sharedManager] getCategoryVideosName:@"philosophy"];
     section4 = [[VideosDataManager sharedManager] getCategoryVideosName:@"activism"];
     section5 = [[VideosDataManager sharedManager] getCategoryVideosName:@"business"];
+    
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    
+    [self.tableView addGestureRecognizer:swipeGesture];
 }
 
+-(void)didSwipe:(UIGestureRecognizer *)gestureRecognizer {
+    
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        CGPoint swipeLocation = [gestureRecognizer locationInView:self.tableView];
+        NSIndexPath *swipedIndexPath = [self.tableView indexPathForRowAtPoint:swipeLocation];
+        //UITableViewCell* swipedCell = [self.tableView cellForRowAtIndexPath:swipedIndexPath];
+        
+        int row = swipedIndexPath.row;
+        int section = swipedIndexPath.section;
+        NSArray* data = [[NSArray alloc]init];
+        
+        if(section == 0)
+            data = section1;
+        if(section == 1)
+            data = section2;
+        if(section == 2)
+            data = section3;
+        if(section == 3)
+            data = section4;
+        if(section == 4)
+            data = section5;
+        
+        if(row < [data count]){
+            VideoCast* vid = [data objectAtIndex:row];
+            if(vid != nil){
+                NSString* msg = [NSString stringWithFormat:@"filter:%@",vid.vidID];
+                [[CommManager sharedManager] sendMessage:msg];
+            }
+        }
+
+        if(section == 0)
+           [section1 removeObjectAtIndex:row];
+        if(section == 1)
+            [section2 removeObjectAtIndex:row];
+        if(section == 2)
+            [section3 removeObjectAtIndex:row];
+        if(section == 3)
+            [section4 removeObjectAtIndex:row];
+        if(section == 4)
+            [section5 removeObjectAtIndex:row];
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:swipedIndexPath] withRowAnimation:UITableViewRowAnimationRight];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -146,9 +194,6 @@
         VideoCast* video = [data objectAtIndex:path.row];
         DetailsViewController* detailsViewController = [segue destinationViewController];
         detailsViewController.videoID = video.title;
-        NSString* msg = [NSString stringWithFormat:@"filter:%@",video.vidID];
-        [[CommManager sharedManager] sendMessage:msg];
-
     }
 }
 
