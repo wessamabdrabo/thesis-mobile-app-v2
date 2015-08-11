@@ -8,7 +8,7 @@
 
 #import "CommManager.h"
 
-#define TCP_SERVER_IP @"localhost"//@"169.254.195.12"
+#define TCP_SERVER_IP @"169.254.163.115"
 #define TCP_PORT 8000
 
 @interface CommManager(){

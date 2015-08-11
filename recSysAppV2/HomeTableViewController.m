@@ -40,13 +40,45 @@
     section4 = [[VideosDataManager sharedManager] getCategoryVideosName:@"activism"];
     section5 = [[VideosDataManager sharedManager] getCategoryVideosName:@"business"];
     
-    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
-    swipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    UISwipeGestureRecognizer *swipeRightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)];
+    swipeRightGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.tableView addGestureRecognizer:swipeRightGesture];
     
-    [self.tableView addGestureRecognizer:swipeGesture];
+    UISwipeGestureRecognizer *swipeLeftGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
+    swipeLeftGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.tableView addGestureRecognizer:swipeLeftGesture];
 }
-
--(void)didSwipe:(UIGestureRecognizer *)gestureRecognizer {
+-(void)didSwipeLeft:(UIGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        CGPoint swipeLocation = [gestureRecognizer locationInView:self.tableView];
+        NSIndexPath *swipedIndexPath = [self.tableView indexPathForRowAtPoint:swipeLocation];
+        UITableViewCell* swipedCell = [self.tableView cellForRowAtIndexPath:swipedIndexPath];
+        [swipedCell setSelected:YES animated:YES];
+        int row = swipedIndexPath.row;
+        int section = swipedIndexPath.section;
+        NSArray* data = [[NSArray alloc]init];
+        
+        if(section == 0)
+            data = section1;
+        if(section == 1)
+            data = section2;
+        if(section == 2)
+            data = section3;
+        if(section == 3)
+            data = section4;
+        if(section == 4)
+            data = section5;
+        
+        if(row < [data count]){
+            VideoCast* vid = [data objectAtIndex:row];
+            if(vid != nil){
+                NSString* msg = [NSString stringWithFormat:@"detail:%@",vid.vidID];
+                [[CommManager sharedManager] sendMessage:msg];
+            }
+        }
+    }
+}
+-(void)didSwipeRight:(UIGestureRecognizer *)gestureRecognizer {
     
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         CGPoint swipeLocation = [gestureRecognizer locationInView:self.tableView];
