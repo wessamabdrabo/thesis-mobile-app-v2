@@ -55,7 +55,6 @@
          MoreDetailsViewController* moreDetails = segue.destinationViewController;
          moreDetails.descrText = _video.longDescr;
      }
-     
  }
 
 
@@ -197,7 +196,8 @@
                 [self.footerView setHidden:YES];
                 [self.footerViewLabel setHidden:YES];
                 
-                [[CommManager sharedManager] sendMessage:_video.url]; //start video on server
+                NSString* msg = [NSString stringWithFormat:@"play:%@",_video.vidID];
+                [[CommManager sharedManager] sendMessage:msg]; //start video on server
 
                 [[[UIAlertView alloc] initWithTitle:nil message:@"Your video will now start on other display" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
             }
