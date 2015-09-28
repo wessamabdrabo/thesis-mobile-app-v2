@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RatingViewController : UIViewController
+@interface RatingViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backToVideos;
+@property (weak, nonatomic) IBOutlet UITextField *reviewTextField;
 
 @end

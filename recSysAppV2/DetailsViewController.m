@@ -199,7 +199,7 @@
                 NSString* msg = [NSString stringWithFormat:@"play:%@",_video.vidID];
                 [[CommManager sharedManager] sendMessage:msg]; //start video on server
 
-                [[[UIAlertView alloc] initWithTitle:nil message:@"Your video will now start on other display" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+                [[[UIAlertView alloc] initWithTitle:nil message:@"Your video will now start on other display" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
             }
         };
         [self.animator addBehavior:dynamic];
@@ -216,6 +216,20 @@
     // http://stackoverflow.com/a/2051861/1271826
     
     return atan2(view.transform.b, view.transform.a);
+}
+
+#pragma mark - alertview delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    NSLog(@"message button");
+    
+    if([title isEqualToString:@"OK"]){
+        NSLog(@"OK");
+        [self performSegueWithIdentifier:@"showRating" sender:self];
+    }
+    else if([title isEqualToString:@"Cancel"]){
+        NSLog(@"Cancel clicked");
+    }
 }
 
 @end

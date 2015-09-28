@@ -107,30 +107,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHn-BO-BP9">
-                                <rect key="frame" x="22" y="196" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHn-BO-BP9">
+                                <rect key="frame" x="22" y="138" width="55" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmU-k9-hnL">
-                                <rect key="frame" x="22" y="254" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmU-k9-hnL">
+                                <rect key="frame" x="22" y="196" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gc4-D5-JE6">
-                                <rect key="frame" x="116" y="192" width="154" height="30"/>
+                                <rect key="frame" x="116" y="134" width="154" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uck-9Y-Qso">
-                                <rect key="frame" x="117" y="245" width="152" height="30"/>
+                                <rect key="frame" x="117" y="187" width="152" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEK-3T-vDb">
-                                <rect key="frame" x="30" y="307" width="247" height="30"/>
+                                <rect key="frame" x="29" y="249" width="247" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <state key="normal" title="Next">
@@ -142,7 +142,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jw-wb-nJZ">
-                                <rect key="frame" x="109" y="124" width="88" height="33"/>
+                                <rect key="frame" x="109" y="77" width="88" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -152,6 +152,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="wxN-4x-Cug"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="uck-9Y-Qso" id="cG7-7N-qKl"/>
+                        <outlet property="nameTextField" destination="gc4-D5-JE6" id="Pem-CM-Ucy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -389,7 +393,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHI-3c-yWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="318" y="559"/>
+            <point key="canvasLocation" x="218" y="503"/>
         </scene>
         <!--Details-->
         <scene sceneID="o1A-DR-WFa">
@@ -500,7 +504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0w-bW-Qbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811" y="564"/>
+            <point key="canvasLocation" x="673" y="491"/>
         </scene>
         <!--Description-->
         <scene sceneID="svF-dn-7Vq">
@@ -542,7 +546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93T-T6-J0z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811" y="1221"/>
+            <point key="canvasLocation" x="1097" y="953"/>
         </scene>
         <!--Rating View Controller-->
         <scene sceneID="iVl-X7-9ba">
@@ -589,16 +593,17 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="backToVideos" destination="dg7-aA-oZo" id="C1A-8g-z0s"/>
+                        <outlet property="reviewTextField" destination="jC5-ad-uE5" id="00n-fa-vBq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XwN-uu-KTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <barButtonItem title="Back to Videos" id="dg7-aA-oZo">
+                <barButtonItem title="Done" id="dg7-aA-oZo">
                     <connections>
                         <segue destination="t5f-Lh-NbK" kind="show" id="56e-nn-Hkj"/>
                     </connections>
                 </barButtonItem>
             </objects>
-            <point key="canvasLocation" x="1219" y="564"/>
+            <point key="canvasLocation" x="1531" y="496"/>
         </scene>
     </scenes>
     <resources>
@@ -608,6 +613,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Evq-Mj-7S3"/>
-        <segue reference="lhi-Ci-Ryy"/>
+        <segue reference="56e-nn-Hkj"/>
     </inferredMetricsTieBreakers>
 </document>

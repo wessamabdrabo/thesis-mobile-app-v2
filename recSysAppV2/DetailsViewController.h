@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "VideoCast.h"
-@interface DetailsViewController : UIViewController
+@interface DetailsViewController : UIViewController <UIAlertViewDelegate>
 - (IBAction)watchVideoClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *videoTitle;

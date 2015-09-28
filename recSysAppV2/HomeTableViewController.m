@@ -32,7 +32,7 @@
     
     self.navigationItem.hidesBackButton = YES; //better to remove preferences and sign up from stack once sign up is done!
     
-    sectionsHeaderTitles = @[@"Top picks for Wessam", @"Because you liked Creativity", @"You might also like", @"Most watched in Activism", @"Top rated in Business"];
+    sectionsHeaderTitles = @[@"Top picks for You", @"Because you liked Creativity", @"You might also like", @"Most watched in Activism", @"Top rated in Business"];
     
     section1 = [[VideosDataManager sharedManager] getCategoryVideosName:@"photography"];
     section2 = [[VideosDataManager sharedManager] getCategoryVideosName:@"creativity"];
