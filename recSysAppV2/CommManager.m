@@ -8,7 +8,7 @@
 
 #import "CommManager.h"
 
-#define TCP_SERVER_IP @"localhost"
+#define TCP_SERVER_IP @"169.254.56.221"
 #define TCP_PORT 8000
 
 @interface CommManager(){
@@ -29,23 +29,26 @@
 
 - (id)init {
     if (self = [super init]) {
-        //init network stack
-        CFReadStreamRef readStream;
-        CFWriteStreamRef writeStream;
-        CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)TCP_SERVER_IP, TCP_PORT, &readStream, &writeStream);
-        inputStream = (__bridge NSInputStream *)readStream;
-        outputStream = (__bridge NSOutputStream *)writeStream;
-        [inputStream setDelegate:self];
-        [outputStream setDelegate:self];
-        [inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-        [outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-        [inputStream open];
-        [outputStream open];
-        NSLog(@"[CommManager] network initialized!");
+        [self initNetworkStack];
     }
     return self;
 }
 
+-(void) initNetworkStack{
+    //init network stack
+    CFReadStreamRef readStream;
+    CFWriteStreamRef writeStream;
+    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)TCP_SERVER_IP, TCP_PORT, &readStream, &writeStream);
+    inputStream = (__bridge NSInputStream *)readStream;
+    outputStream = (__bridge NSOutputStream *)writeStream;
+    [inputStream setDelegate:self];
+    [outputStream setDelegate:self];
+    [inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    [outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    [inputStream open];
+    [outputStream open];
+    NSLog(@"[CommManager] network initialized!");
+}
 #pragma mark - events handling
 - (void)stream:(NSStream *)theStream handleEvent:(NSStreamEvent)streamEvent {
     

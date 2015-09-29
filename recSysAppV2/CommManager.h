@@ -11,4 +11,6 @@
 @interface CommManager : NSObject <NSStreamDelegate>
 + (id)sharedManager;
 -(void) sendMessage:(NSString*) msg;
+-(void) initNetworkStack;
+
 @end
